@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroCore provides a central place to modify mappings, vim options, autocommands, and more!
 -- Configuration documentation can be found with `:h astrocore`
@@ -57,6 +57,10 @@ return {
     mappings = {
       -- first key is the mode
       n = {
+        -- will override default keybind: find themes
+        ["<Leader>ft"] = { "<Cmd>TermSelect<CR>", desc = "Find Terminal" },
+        ["<Leader>tg"] = { function() require("astrocore").toggle_term_cmd "btm" end, desc = "ToggleTerm bottom" },
+        ["<Leader>tt"] = { '<Cmd>execute v:count. " ToggleTerm direction=tab"<CR>', desc = "ToggleTerm tabbed" },
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
@@ -79,6 +83,9 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      t = {
+        ["<M-t>"] = { '<Cmd>execute v:count . " ToggleTerm direction=tab"<CR>', desc = "ToggleTerm tabbed" },
       },
     },
   },
