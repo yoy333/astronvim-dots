@@ -61,6 +61,12 @@ return {
         ["<Leader>ft"] = { "<Cmd>TermSelect<CR>", desc = "Find Terminal" },
         ["<Leader>tg"] = { function() require("astrocore").toggle_term_cmd "btm" end, desc = "ToggleTerm bottom" },
         ["<Leader>tt"] = { '<Cmd>execute v:count. " ToggleTerm direction=tab"<CR>', desc = "ToggleTerm tabbed" },
+
+        -- Map <leader>d to delete to black hole register in normal mode
+        ["<leader>r"] = { '"_d', desc = "Delete to black hole" },
+        ["<leader>rr"] = { '"_dd', desc = "Delete line to black hole" },
+        -- Map x to always delete to black hole (common preference)
+        ["x"] = { '"_x', desc = "Delete char to black hole" },
         -- second key is the lefthand side of the map
 
         -- navigate buffer tabs
@@ -83,6 +89,9 @@ return {
 
         -- setting a mapping to false will disable it
         -- ["<C-S>"] = false,
+      },
+      v = {
+        ["<leader>r"] = { '"_d', desc = "Delete selection to black hole" },
       },
       t = {
         ["<M-t>"] = { '<Cmd>execute v:count . " ToggleTerm direction=tab"<CR>', desc = "ToggleTerm tabbed" },
