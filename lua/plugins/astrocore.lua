@@ -45,6 +45,7 @@ return {
         spell = false, -- sets vim.opt.spell
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
+        autoindent = true,
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
@@ -64,7 +65,7 @@ return {
 
         -- Map <leader>d to delete to black hole register in normal mode
         ["<leader>r"] = { '"_d', desc = "Delete to black hole" },
-        ["<leader>rr"] = { '"_dd', desc = "Delete line to black hole" },
+        -- ["<leader>rr"] = { '"_dd', desc = "Delete line to black hole" },
         -- Map x to always delete to black hole (common preference)
         ["x"] = { '"_x', desc = "Delete char to black hole" },
         -- second key is the lefthand side of the map
