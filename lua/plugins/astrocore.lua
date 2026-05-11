@@ -21,7 +21,8 @@ return {
     },
     -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
     diagnostics = {
-      virtual_text = true,
+      -- virtual_text = false,
+      -- virtual_lines = false,
       underline = true,
     },
     -- passed to `vim.filetype.add`
