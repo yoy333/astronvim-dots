@@ -85,16 +85,7 @@ return {
           desc = "Close buffer from tabline",
         },
 
-        ["<Leader>lm"] = {
-          function()
-            -- Auto-write current buffer before compiling
-            vim.cmd("w")
-            -- Open a terminal split, compile, and execute
-            vim.cmd("term g++ -std=c++20 % -o %:r && %:r")
-            vim.cmd("startinsert")
-          end,
-          desc = "Compile and run C++",
-        },
+        
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
