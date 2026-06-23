@@ -103,8 +103,16 @@ return {
             -- Open a terminal split, compile, and execute
             vim.cmd("term g++ -std=c++20 % -o %:r && %:r")
             vim.cmd("startinsert")
+
+            -- return to normal mode after closing terminal
+            vim.api.nvim_create_autocmd("TermClose", {
+              buffer = 0, -- 0 = current buffer (the terminal we just opened)
+              once = true,
+              callback = function() vim.cmd("stopinsert") end,
+            })
           end,
           desc = "Compile and run C++",
+          -- only activate keybind if in a cpp file
           cond = function(client, bufnr) return vim.bo[bufnr].filetype == "cpp" end,
         },
       },
