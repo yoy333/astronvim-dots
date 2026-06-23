@@ -61,19 +61,21 @@ return {
       n = {
         -- will override default keybind: find themes
         ["<Leader>ft"] = { "<Cmd>TermSelect<CR>", desc = "Find Terminal" },
-        ["<Leader>tg"] = { function() require("astrocore").toggle_term_cmd("btm") end, desc = "ToggleTerm bottom" },
-        ["<Leader>tt"] = { '<Cmd>execute v:count. " ToggleTerm direction=tab"<CR>', desc = "ToggleTerm tabbed" },
+        ["<Leader>tg"] = {
+          function() require("astrocore").toggle_term_cmd("btm") end,
+          desc = "ToggleTerm bottom",
+        },
+        ["<Leader>tt"] = {
+          '<Cmd>execute v:count. " ToggleTerm direction=tab"<CR>',
+          desc = "ToggleTerm tabbed",
+        },
 
         -- Map <leader>d to delete to black hole register in normal mode
         ["<leader>r"] = { '"_d', desc = "Delete to black hole" },
         -- ["<leader>rr"] = { '"_dd', desc = "Delete line to black hole" },
-        -- Map x to always delete to black hole (common preference)
+        -- Map x to always delete to black hole
         ["x"] = { '"_x', desc = "Delete char to black hole" },
         -- second key is the lefthand side of the map
-
-        -- navigate buffer tabs
-        ["]b"] = { function() require("astrocore.buffer").nav(vim.v.count1) end, desc = "Next buffer" },
-        ["[b"] = { function() require("astrocore.buffer").nav(-vim.v.count1) end, desc = "Previous buffer" },
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bd"] = {
@@ -84,8 +86,6 @@ return {
           end,
           desc = "Close buffer from tabline",
         },
-
-        
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -98,7 +98,10 @@ return {
         ["<leader>r"] = { '"_d', desc = "Delete selection to black hole" },
       },
       t = {
-        ["<M-t>"] = { '<Cmd>execute v:count . " ToggleTerm direction=tab"<CR>', desc = "ToggleTerm tabbed" },
+        ["<M-t>"] = {
+          '<Cmd>execute v:count . " ToggleTerm direction=tab"<CR>',
+          desc = "ToggleTerm tabbed",
+        },
       },
     },
   },
