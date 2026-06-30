@@ -15,7 +15,7 @@ return {
       large_buf = { size = 1024 * 256, lines = 10000 }, -- set global limits for large files for disabling features like treesitter
       autopairs = true, -- enable autopairs at start
       cmp = true, -- enable completion at start
-      diagnostics = { virtual_text = true, virtual_lines = false }, -- diagnostic settings on startup
+      diagnostics = { virtual_text = true, virtual_lines = true }, -- diagnostic settings on startup
       highlighturl = true, -- highlight URLs at start
       notifications = true, -- enable notifications at start
     },
@@ -47,11 +47,14 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         autoindent = true,
+        smartindent = true,
+        scrolloff = 8, -- sets minimum numbers of lines between cursor and edge of view
       },
       g = { -- vim.g.<key>
         -- configure global vim variables (vim.g)
         -- NOTE: `mapleader` and `maplocalleader` must be set in the AstroNvim opts or before `lazy.setup`
         -- This can be found in the `lua/lazy_setup.lua` file
+        python3_host_prog = "~/.venvs/neovim/bin/python3",
       },
     },
     -- Mappings can be configured through AstroCore as well.
@@ -66,7 +69,7 @@ return {
           desc = "ToggleTerm bottom",
         },
         ["<Leader>tt"] = {
-          '<Cmd>execute v:count. " ToggleTerm direction=tab"<CR>',
+          "<Cmd>ToggleTerm direction=tab<CR>",
           desc = "ToggleTerm tabbed",
         },
 
@@ -77,15 +80,34 @@ return {
         ["x"] = { '"_x', desc = "Delete char to black hole" },
         -- second key is the lefthand side of the map
 
-        -- mappings seen under group name "Buffer"
-        ["<Leader>bd"] = {
+        ["<leader>P"] = {
           function()
-            require("astroui.status.heirline").buffer_picker(
-              function(bufnr) require("astrocore.buffer").close(bufnr) end
-            )
+            _G._paste_over = function(type)
+              if type == "char" then
+                vim.cmd('normal! `[v`]"_d')
+              elseif type == "line" then
+                vim.cmd("normal! '[V']\"_d")
+              elseif type == "block" then
+                vim.cmd('normal! `[\022`]"_d')
+              end
+              vim.cmd("normal! P")
+            end
+            vim.o.operatorfunc = "v:lua._paste_over"
+            return "g@"
           end,
-          desc = "Close buffer from tabline",
+          expr = true,
+          desc = "paste over motion",
         },
+
+        -- mappings seen under group name "Buffer"
+        -- ["<Leader>bd"] = {
+        --   function()
+        --     require("astroui.status.heirline").buffer_picker(
+        --       function(bufnr) require("astrocore.buffer").close(bufnr) end
+        --     )
+        --   end,
+        --   desc = "Close buffer from tabline",
+        -- },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
@@ -99,7 +121,7 @@ return {
       },
       t = {
         ["<M-t>"] = {
-          '<Cmd>execute v:count . " ToggleTerm direction=tab"<CR>',
+          "<Cmd>ToggleTerm direction=tab<CR>",
           desc = "ToggleTerm tabbed",
         },
       },
