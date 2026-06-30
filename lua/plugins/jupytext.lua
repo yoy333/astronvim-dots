@@ -3,9 +3,30 @@ return {
   lazy = false,
   config = function()
     require("jupytext").setup({
+      -- Do not put style="quarto" or output_extension="qmd" at the top level.
+      -- Leave the global defaults untouched to prevent format mismatch crashes.
       style = "hydrogen",
       output_extension = "auto",
-      -- force_ft = "python",
+      force_ft = nil,
+
+      -- Explicitly inject Quarto processing on a per-language basis
+      custom_language_formatting = {
+        python = {
+          extension = "qmd",
+          style = "quarto",
+          force_ft = "quarto",
+        },
+        r = {
+          extension = "qmd",
+          style = "quarto",
+          force_ft = "quarto",
+        },
+        julia = {
+          extension = "qmd",
+          style = "quarto",
+          force_ft = "quarto",
+        },
+      },
     })
   end,
 }
