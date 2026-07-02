@@ -11,7 +11,7 @@ return {
     lspFeatures = {
       enabled = true,
       languages = { "python", "r" }, -- "julia", etc. if you use them
-      chunks = "all",
+      chunks = "curly",
       diagnostics = { enabled = true },
       completion = { enabled = true },
     },
