@@ -35,7 +35,7 @@ return {
     local runner = require("quarto.runner")
     vim.keymap.set(
       "n",
-      "<localleader>rc",
+      "<localleader>rr",
       runner.run_cell,
       { desc = "Run cell" }
     )

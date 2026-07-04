@@ -96,7 +96,8 @@ return {
               and vim.lsp.semantic_tokens ~= nil
           end,
         },
-        ["<Leader>lm"] = {
+        ["<Localleader>rr"] = {
+
           function()
             -- Auto-write current buffer before compiling
             vim.cmd("w")
