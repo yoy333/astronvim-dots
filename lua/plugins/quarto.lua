@@ -57,5 +57,11 @@ return {
       runner.run_line,
       { desc = "Run line" }
     )
+    vim.keymap.set(
+      "n",
+      "<localleader>ri",
+      ":MoltenInterrupt<CR>",
+      { desc = "Interrupt" }
+    )
   end,
 }
