@@ -6,3 +6,9 @@ netrw
 molten checkhealth?
 upgrade v6
 json motions
+warnings for ipynb
+no function inlining 
+  c++
+  python
+  lua
+Export to pyscript

@@ -45,23 +45,7 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- python lsp that I can also use the directory of the working file
-      basedpyright = {
-        root_dir = function(bufnr, on_dir)
-          local fname = vim.api.nvim_buf_get_name(bufnr)
-          on_dir(vim.fs.dirname(fname))
-          -- vim.fs.dirname(fname)
-        end,
-        settings = {
-          basedpyright = {
-            analysis = {
-              extraPaths = { vim.fn.getcwd() }, -- project root fallback for shared imports
-              autoSearchPaths = true,
-              useLibraryCodeForTypes = true,
-              diagnosticMode = "openFilesOnly",
-            },
-          },
-        },
-      },
+      basedpyright = {},
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached

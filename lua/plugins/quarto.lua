@@ -1,11 +1,12 @@
 return {
   "quarto-dev/quarto-nvim",
+  lazy = true,
   ft = { "markdown", "quarto" },
   dependencies = {
     "jmbuhr/otter.nvim", -- LSP for embedded code chunks
-    "nvim-treesitter/nvim-treesitter", -- you already have this via AstroNvim
-    "neovim/nvim-lspconfig", -- you already have this via AstroNvim
-    "hrsh7th/nvim-cmp", -- you already have this via AstroNvim
+    "nvim-treesitter/nvim-treesitter", -- already have this via AstroNvim
+    "neovim/nvim-lspconfig", -- already have this via AstroNvim
+    "hrsh7th/nvim-cmp", -- already have this via AstroNvim
   },
   opts = {
     lspFeatures = {

@@ -1,6 +1,7 @@
 return {
   {
     "benlubas/molten-nvim",
+    lazy = true,
     version = "^1.0.0", -- pin to latest major version for stability
     dependencies = { "3rd/image.nvim" },
     build = ":UpdateRemotePlugins",

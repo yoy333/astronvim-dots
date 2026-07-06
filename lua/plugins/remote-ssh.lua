@@ -1,5 +1,6 @@
 return {
   "ihersom/remote-ssh.nvim",
+  lazy = true,
   dependencies = {
     "neovim/nvim-lspconfig", -- Required to handle the proxied remote LSPs
   },
