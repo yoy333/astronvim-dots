@@ -14,3 +14,4 @@ no function inlining
   lua
 Move export to pyscript to astrolsp or somehow dependent on filetype
 Lazy optimize
+paste over in visual mode

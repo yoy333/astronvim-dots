@@ -112,8 +112,8 @@ return {
       },
       t = {
         ["<M-t>"] = {
-          "<Cmd>ToggleTerm direction=tab<CR>",
-          desc = "ToggleTerm tabbed",
+          function() vim.cmd("noautocmd ToggleTerm") end,
+          desc = "ToggleTerm Close",
         },
       },
     },
