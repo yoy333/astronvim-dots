@@ -4,6 +4,7 @@ Buffer navigation keymaps for qmd
 Folding support for qmd
 netrw
 molten checkhealth?
+molten motion to enter output
 upgrade v6
 json motions
 warnings for ipynb
@@ -11,4 +12,5 @@ no function inlining
   c++
   python
   lua
-Export to pyscript
+Move export to pyscript to astrolsp or somehow dependent on filetype
+Lazy optimize
