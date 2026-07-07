@@ -99,7 +99,6 @@ return {
           end,
         },
         ["<Localleader>rr"] = {
-
           function()
             -- Auto-write current buffer before compiling
             vim.cmd("w")
