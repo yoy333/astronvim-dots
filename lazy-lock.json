@@ -47,7 +47,7 @@
   "nvim-ts-context-commentstring": { "branch": "main", "commit": "1b212c2eee76d787bbea6aa5e92a2b534e7b4f8f" },
   "nvim-ufo": { "branch": "main", "commit": "61463090a4f55f5d080236ea62f09d1cd8976ff3" },
   "nvim-window-picker": { "branch": "main", "commit": "6382540b2ae5de6c793d4aa2e3fe6dbb518505ec" },
-  "otter.nvim": { "branch": "main", "commit": "d781eda3bc18dbc8677f9a24abdc705fb74e4428" },
+  "otter.nvim": { "branch": "main", "commit": "f4a033d4e2bd86d4f09386a73d3861538601253d" },
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
   "quarto-nvim": { "branch": "main", "commit": "17f1e5d664bc615478230dc0240666329efacf9b" },
   "remote-ssh.nvim": { "branch": "master", "commit": "b0fc5c8452b83a81bdf9bf19db3afacb26e41720" },

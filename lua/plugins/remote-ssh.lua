@@ -4,6 +4,9 @@ return {
   dependencies = {
     "neovim/nvim-lspconfig", -- Required to handle the proxied remote LSPs
   },
+  keys = {
+    { "<Leader>ss", ":RemoteSession", desc = "Start SSH" },
+  },
   config = function()
     -- Pull your existing local lsp capabilities / handlers if desired
     local capabilities = vim.lsp.protocol.make_client_capabilities()

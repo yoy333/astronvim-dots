@@ -15,3 +15,5 @@ no function inlining
 Move export to pyscript to astrolsp or somehow dependent on filetype
 Lazy optimize
 paste over in visual mode
+fix opts + config overrulings
+  quarto

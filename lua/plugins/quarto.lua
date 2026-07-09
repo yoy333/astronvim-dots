@@ -1,6 +1,7 @@
 return {
   "quarto-dev/quarto-nvim",
   lazy = true,
+  cmd = "RemoteSession",
   ft = { "markdown", "quarto" },
   dependencies = {
     "jmbuhr/otter.nvim", -- LSP for embedded code chunks
