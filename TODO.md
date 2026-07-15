@@ -17,3 +17,4 @@ Lazy optimize
 paste over in visual mode
 fix opts + config overrulings
   quarto
+check for avaliable dependencies
