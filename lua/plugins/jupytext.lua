@@ -59,12 +59,17 @@ return {
       "<Localleader>es",
       function()
         local file_path = vim.fn.expand("%:p")
-
-        vim.notify(file_path)
-
         vim.fn.system("jupytext --to py:percent " .. file_path)
       end,
-      desc = "Export to a script",
+      desc = "Export to script",
+    },
+    {
+      "<Localleader>en",
+      function()
+        local file_path = vim.fn.expand("%:p")
+        vim.fn.system("jupytext --to notebook:percent " .. file_path)
+      end,
+      desc = "Export to notebook",
     },
   },
 }
