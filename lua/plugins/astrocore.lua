@@ -47,7 +47,7 @@ return {
         signcolumn = "yes", -- sets vim.opt.signcolumn to yes
         wrap = false, -- sets vim.opt.wrap
         autoindent = true,
-        smartindent = true,
+        smartindent = false,
         scrolloff = 8, -- sets minimum numbers of lines between cursor and edge of view
       },
       g = { -- vim.g.<key>
@@ -62,6 +62,9 @@ return {
     mappings = {
       -- first key is the mode
       n = {
+        -- overrides comment in favor of gcc
+        ["<leader>/"] = false,
+
         -- will override default keybind: find themes
         ["<Leader>ft"] = { "<Cmd>TermSelect<CR>", desc = "Find Terminal" },
         ["<Leader>tg"] = {
@@ -98,6 +101,9 @@ return {
           expr = true,
           desc = "paste over motion",
         },
+
+        ["<leader>pp"] = { ":Lazy<CR>", desc = "Open Lazy UI" },
+        ["<leader>ss"] = { ":restart<CR>", desc = "restart" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus

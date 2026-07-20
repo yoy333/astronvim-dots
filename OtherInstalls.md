@@ -3,3 +3,6 @@
 2. .venvs
 3. quarto binary
 4. pipx installs
+5. optional for ssh
+  ripgrep, fd-find
+6. sshfs

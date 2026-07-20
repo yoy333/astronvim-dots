@@ -2,7 +2,6 @@ pretty typescript errors
 find and replace
 Buffer navigation keymaps for qmd
 Folding support for qmd
-netrw
 molten checkhealth?
 molten motion to enter output
 upgrade v6
@@ -18,3 +17,4 @@ paste over in visual mode
 fix opts + config overrulings
   quarto
 check for avaliable dependencies
+fix virtual text artifact
