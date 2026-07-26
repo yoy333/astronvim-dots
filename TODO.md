@@ -2,11 +2,11 @@ pretty typescript errors
 find and replace
 Buffer navigation keymaps for qmd
 Folding support for qmd
+folding errors for .py
 molten checkhealth?
 molten motion to enter output
 upgrade v6
 json motions
-warnings for ipynb
 no function inlining 
   c++
   python

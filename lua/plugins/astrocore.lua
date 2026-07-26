@@ -63,7 +63,7 @@ return {
       -- first key is the mode
       n = {
         -- overrides comment in favor of gcc
-        ["<leader>/"] = false,
+        ["<Leader>/"] = false,
 
         -- will override default keybind: find themes
         ["<Leader>ft"] = { "<Cmd>TermSelect<CR>", desc = "Find Terminal" },
@@ -103,7 +103,14 @@ return {
         },
 
         ["<leader>pp"] = { ":Lazy<CR>", desc = "Open Lazy UI" },
+
+        ["<leader>s"] = { desc = "system" },
         ["<leader>ss"] = { ":restart<CR>", desc = "restart" },
+
+        ["<leader>st"] = { desc = "tab" },
+        ["<leader>stc"] = { ":tabclose<CR>", desc = "close tab" },
+        ["<leader>stn"] = { ":tabnew<CR>", desc = "new tab" },
+        ["<leader>stt"] = { ":tabnext<CR>", desc = "next tab" },
 
         -- tables with just a `desc` key will be registered with which-key if it's installed
         -- this is useful for naming menus
