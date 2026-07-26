@@ -12,9 +12,5 @@ no function inlining
   python
   lua
 Move export to pyscript to astrolsp or somehow dependent on filetype
-Lazy optimize
 paste over in visual mode
-fix opts + config overrulings
-  quarto
-check for avaliable dependencies
 fix virtual text artifact
