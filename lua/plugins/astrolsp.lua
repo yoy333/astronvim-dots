@@ -103,7 +103,7 @@ return {
             -- Auto-write current buffer before compiling
             vim.cmd("w")
             -- Open a terminal split, compile, and execute
-            vim.cmd("term g++ -std=c++20 % -o %:r && %:r")
+            vim.cmd("term g++ -std=c++20 %:p:h/*.cpp -o %:r && %:r")
             vim.cmd("startinsert")
 
             -- return to normal mode after closing terminal
