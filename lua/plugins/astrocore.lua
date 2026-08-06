@@ -83,24 +83,25 @@ return {
         ["x"] = { '"_x', desc = "Delete char to black hole" },
         -- second key is the lefthand side of the map
 
-        ["<leader>P"] = {
-          function()
-            _G._paste_over = function(type)
-              if type == "char" then
-                vim.cmd('normal! `[v`]"_d')
-              elseif type == "line" then
-                vim.cmd("normal! '[V']\"_d")
-              elseif type == "block" then
-                vim.cmd('normal! `[\022`]"_d')
-              end
-              vim.cmd("normal! P")
-            end
-            vim.o.operatorfunc = "v:lua._paste_over"
-            return "g@"
-          end,
-          expr = true,
-          desc = "paste over motion",
-        },
+        ["<leader>P"] = false,
+        -- {
+        --   function()
+        --     _G._paste_over = function(type)
+        --       if type == "char" then
+        --         vim.cmd('normal! `[v`]"_d')
+        --       elseif type == "line" then
+        --         vim.cmd("normal! '[V']\"_d")
+        --       elseif type == "block" then
+        --         vim.cmd('normal! `[\022`]"_d')
+        --       end
+        --       vim.cmd("normal! P")
+        --     end
+        --     vim.o.operatorfunc = "v:lua._paste_over"
+        --     return "g@"
+        --   end,
+        --   expr = true,
+        --   desc = "paste over motion",
+        -- },
 
         ["<leader>pp"] = { ":Lazy<CR>", desc = "Open Lazy UI" },
 
