@@ -9,6 +9,7 @@ return {
     },
     host_paths = {
       ["ynez"] = "/home/ColinDoherty/AI/chess-interp/",
+      ["temescal"] = "/home/ColinDoherty/AI/chess-interp/",
     },
   },
 }
