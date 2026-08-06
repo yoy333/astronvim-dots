@@ -45,7 +45,15 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- python lsp that I can also use the directory of the working file
-      basedpyright = {},
+      basedpyright = {
+        settings = {
+          basedpyright = {
+            analysis = {
+              diagnosticMode = "workspace",
+            },
+          },
+        },
+      },
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached
