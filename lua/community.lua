@@ -8,7 +8,6 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.split-and-window.colorful-winsep-nvim" },
-  { import = "astrocommunity.ai.codecompanion-nvim" },
   -- { import = "astrocommunity.pack.lua" },
   -- { import = "astrocommunity.lsp.ts-error-translator-nvim" },
   -- import/override with your plugins folder
