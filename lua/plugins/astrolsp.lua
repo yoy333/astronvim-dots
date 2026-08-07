@@ -54,6 +54,11 @@ return {
           },
         },
       },
+      -- prevent jdtls from openning automatically from astrolsp
+      -- using ftplugin to start it instead
+      jdtls = {
+        filetypes = nil,
+      },
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
     },
     -- customize how language servers are attached
